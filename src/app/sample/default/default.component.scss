@@ -1,0 +1,102 @@
+.tab-panel-nav {
+    height: 30px;
+    position: absolute;
+    top: -25px;
+    right: 0;
+    left: 0;
+}
+
+.image-wrapper {
+    width: 140px;
+    height: 140px;
+    max-height: 140px;
+    max-width: 140px;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 0px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1;
+    vertical-align: text-top;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 3px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
+
+.image-wrapper2 {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 1;
+    vertical-align: text-top;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        border: 1px solid #e1e1e1;
+        border-radius: 10px;
+        padding: 3px;
+    }
+}
+
+.sample-tab-view div {
+    padding: 5px;
+    display: inline;
+    font-size: 13px;
+    color: #54585B !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #e96663;
+}
+
+.sample-tab-view div:hover {
+    color: #e96663 !important;
+    cursor: pointer;
+}
+
+.sample-tab-view div.sselected {
+    border-top: 1px solid #e96663;
+    border-left: 1px solid #e96663;
+    border-right: 1px solid #e96663;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    color: #e96663 !important;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.sample-tab-view {
+    height: 30px;
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    top: 2px;
+    text-align: right;
+}
+
+.sample-default-table {
+    tr {
+        td {
+            font-size: 13px;
+        }
+        .nowrap {
+            white-space: nowrap;
+            line-height: 21px;
+        }
+    }
+}

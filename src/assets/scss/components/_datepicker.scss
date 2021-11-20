@@ -1,0 +1,120 @@
+ngb-datepicker {
+  @extend .border;
+  .ngb-dp-header {
+    background-color: #FFF;
+    padding: 0;
+    direction: ltr;
+    .ngb-dp-arrow {
+      button {
+        .ngb-dp-navigation-chevron {
+          border-width: .11em .11em 0 0;
+          width: .44rem;
+          height: .44rem;
+        }
+      }
+    }
+    .ngb-dp-navigation-select {
+      flex: none !important;
+      select {
+        //border-color: $border-color;
+        border: none !important;
+        background: none !important;
+        font-size: 13px !important;
+        flex: none !important;
+        width: auto !important;
+        padding: 0.2rem !important;
+        height: 1.4rem !important;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .ngb-dp-content {
+    .ngb-dp-month {
+      width: 100%;
+      font-size: 0.75rem;
+      .ngb-dp-month-name {
+        background-color: #fff;
+      }
+      .ngb-dp-week {
+        &.ngb-dp-weekdays {
+          margin-bottom: 4px;
+          background-color: #fff;
+          /*border-top: 1px solid $border-color;
+          border-color: $border-color;*/
+          border-bottom: none !important;
+          .ngb-dp-weekday {
+            /*color: theme-color(primary);*/
+            color: #54585B;
+            font-weight: 600 !important;
+            font-style: normal;
+            font-size: 100%;
+            height: 1.5rem;
+            width: 14.28%;
+          }
+        }
+        .ngb-dp-day {
+          width: 14.28%;
+          height: 1.5rem;
+          &:focus {
+            outline: none;
+          }
+          .btn-light {
+            &:hover {
+              //background-color: rgba(theme-color(primary), .2);
+              background-color: #D0E9F7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ngb-dp-today div.btn-light{
+  color: #0089D6;
+  background-color: #FFF;
+}
+
+.range-selection {
+  .form-group.hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: theme-color(primary);
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba(theme-color(primary), .5);
+  }
+}
+
+[ngbDatepickerDayView]{
+  height: 1.5rem !important;
+  line-height: 1.5rem !important;
+  width: 100% !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+[ngbDatepickerDayView].outside {
+ opacity: 1 !important; 
+}
+
+.ngb-dp-arrow-btn {
+  color: #54585B !important;
+}

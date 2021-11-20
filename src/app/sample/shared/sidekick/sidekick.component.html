@@ -1,0 +1,38 @@
+<div class="sidekick">
+    <div class="sidekick-panel">
+        <div class="sidekick-toggler sample-link" (click)="toggleSidekick()"></div>
+        <div class="sidekick-panel-nav">
+            <a class="sselected"><i class="sample-icon-user-tab"></i></a>
+            <div ngbDropdown class="menuwrapper">
+                <div ngbDropdownToggle>
+                    <i class="sample-icon-menu"></i>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu-custom">
+                    <button ngbDropdownItem class="dropdown-item-custom">Özet</button>
+                    <button ngbDropdownItem class="dropdown-item-custom">Ayarlar</button>
+                    <div class="dropdown-divider"></div>
+                    <a ngbDropdownItem class="dropdown-item-custom" style="font-weight: 400 !important; color: #171819; font-size: 13px !important;">Çıkış Yap</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidekick-body m-1" [perfectScrollbar]>
+            <div class="sidekick-panel-0">
+                <div class="sample-profile-info mt-2 mb-2">
+                    <div class="sample-profile-picture mr-2">
+                        <img ykholder="profile-default.svg" ykImgChecker />
+                    </div>
+                    <div class="sample-profile-user">
+                        <div *ngFor="let item of results; index as i">{{item.fullname}}</div>
+                    </div>
+                </div>
+                <div class="sample-menu">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidekick-sample">
+        <div class="sidekick-toggler-sample sample-link" (click)="toggleSidekick()"></div>
+        <div class="sidekick-sample-body"></div>
+    </div>

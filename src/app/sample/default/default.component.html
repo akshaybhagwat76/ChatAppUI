@@ -1,0 +1,22 @@
+<div class="tab-panel-nav">
+    <div class="sample-tab-view">
+        <div (click)="displayView = 0" [class.sselected]="displayView == 0">Özel</div>
+        <div (click)="displayView = 1" [class.sselected]="displayView == 1">Genel</div>
+    </div>
+</div>
+<div class="page-body m-1" [perfectScrollbar]>
+    <div class="m-2" *ngIf="displayView == 0">
+        <div class="row">
+            <div class="col-12 text-center">
+                
+            </div>
+        </div>
+    </div>
+    <div class="m-2" *ngIf="displayView == 1">
+        <div class="row">
+            <div class="col-12 text-center mt-2 mb-3">
+                
+            </div>
+        </div>
+    </div>
+</div>

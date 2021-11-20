@@ -1,0 +1,17 @@
+<div>
+  <ngx-spinner>
+  </ngx-spinner>
+</div>
+
+<div class="user-info-wrapper">
+  <div class="initials" [ngStyle]="{'background-color': '#66B2FF'}">KA</div>
+  <div class="user-name">Kullanıcı Adı</div>
+  
+  <button type="button" style="vertical-align: middle; padding: 0 6px; font-size: 16px;" class="sample-btn sample-bg-p1 ml-2" (click)="openModal()">
+    <i class="mdi mdi-comment-processing-outline"></i>
+  </button>
+</div>
+
+<ng-template #testModal let-close="close">
+  <sample-modal [close]="close"></sample-modal>
+</ng-template>

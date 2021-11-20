@@ -1,0 +1,22 @@
+<div class="modal-body" style="font-size: 13px !important; line-height: 16px !important;">
+    <div class="row mt-2 mb-3">
+        <div class="col-12 text-center">
+            <h5>Örnek Modal</h5>
+        </div>
+    </div>
+    <input type="text" style="display: none;">
+    <table class="w-100">
+        <tr>
+            <td>
+                <mat-form-field appearance="outline" class="w-100 mb-1">
+                    <mat-label>Örnek metin</mat-label>
+                    <textarea matInput rows="4"></textarea>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <div class="text-right mt-3">
+        <div class="mr-3 sample-link" (click)="close()">İptal</div>
+        <button type="submit" class="sample-btn sample-bg-p1" (click)="save()">Kaydet</button>
+    </div>
+</div>
