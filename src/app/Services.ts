@@ -21,6 +21,18 @@ export class Services {
   getCustomerList(): Observable<any> {
     return this._http.get<any>("https://localhost:44307/api/chat");
   }
+  SearchCustomer(prefix): Observable<any> {
+    return this._http.get<any>("https://localhost:44307/api/chat/SearchCustomer?prefix="+prefix);
+  }
+  SendMessages(msg:any): Observable<any> {
+    return this._http.post<any>("https://localhost:44307/api/chat/ChatCustomer",msg);
+  }
+  GetMessages(id:any): Observable<any> {
+    return this._http.get<any>("https://localhost:44307/api/chat/GetMessages?id="+id);
+  }
+  GetCustomerAllMsg(id:any): Observable<any> {
+    return this._http.get<any>("https://localhost:44307/api/chat/GetCustomerAllMsg?id="+id);
+  }
 //   checkLogin() {
 //     return localStorage.getItem("currentUser") ? true : false;
 //   }

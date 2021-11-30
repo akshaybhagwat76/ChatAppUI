@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DefaultComponent } from './sample/default/default.component';
 import { SampleLayoutComponent } from './_layouts/sample-layout.component';
 import { SAMPLE_ROUTES } from './_routes/sample-layout-routes';
 

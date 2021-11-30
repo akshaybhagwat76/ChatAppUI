@@ -18,11 +18,32 @@
         <div class="sidekick-body m-1" [perfectScrollbar]>
             <div class="sidekick-panel-0">
                 <div class="sample-profile-info mt-2 mb-2">
-                    <div class="sample-profile-picture mr-2">
+                    <!-- <div class="sample-profile-picture mr-2">
                         <img ykholder="profile-default.svg" ykImgChecker />
                     </div>
                     <div class="sample-profile-user">
                         <div *ngFor="let item of results; index as i">{{item.fullname}}</div>
+                    </div> -->
+                    <div class="card chat-app">
+                        <div id="plist" class="people-list">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                                </div>
+                                <input type="text" (keydown)="Serachfield($event)" class="form-control" placeholder="Search...">
+                                <ul class="list-unstyled chat-list mt-2 mb-0">
+                                    <li class="clearfix" *ngFor="let item of results; index as i">
+                                        <a (click)="redirectTodefault(item.fullname,item.id)">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                                            <div class="about">
+                                                <div class="name">{{item.fullname}}</div>
+                                                <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="sample-menu">
@@ -30,9 +51,70 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="card chat-app">
+            <a class="sselected"><i class="sample-icon-user-tab"></i></a>
+            <div id="plist" class="people-list">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li class="clearfix" *ngFor="let item of results; index as i">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">{{item.fullname}}</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>
+                        </div>
+                    </li>
+                     <li class="clearfix active">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Aiden Chavez</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Mike Thomas</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Christian Kelly</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Monica Ward</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Dean Henry</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28 </div>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </div> -->
+        <div class="sidekick-toggler sample-link" (click)="toggleSidekick()"></div>
+
     </div>
 
     <div class="sidekick-sample">
-        <div class="sidekick-toggler-sample sample-link" (click)="toggleSidekick()"></div>
-        <div class="sidekick-sample-body"></div>
+        <div class="sidekick-toggler-sample sample-link" (click)="toggleSidekick()">
+
+        </div>
+        <div class="sidekick-sample-body">
+
+        </div>
     </div>

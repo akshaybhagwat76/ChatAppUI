@@ -1,6 +1,7 @@
 import { Component, Inject, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Services } from 'src/app/Services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sample-sidekick',
@@ -11,7 +12,7 @@ import { Services } from 'src/app/Services';
 
 export class SampleSidekickComponent implements OnInit, OnDestroy {
   results:any;
-  constructor(@Inject(DOCUMENT) private document: Document,private _Service: Services) { }
+  constructor(@Inject(DOCUMENT) private document: Document,private _Service: Services,private router:Router) { }
 
   ngOnInit(): void { 
     this._Service.getCustomerList().subscribe(result => {
@@ -44,5 +45,22 @@ export class SampleSidekickComponent implements OnInit, OnDestroy {
 
     const sk6 = this.document.body.getElementsByClassName('menuwrapper')[0];
     sk6.classList.toggle('menuwrapper-open');
+  }
+  Serachfield(event){
+    debugger
+    this._Service.SearchCustomer(event.target.value).subscribe(result => {
+      debugger
+      this.results=result;
+    });
+  }
+  redirectTodefault(fullname,id){
+    debugger
+    localStorage.setItem('Name',fullname);
+    localStorage.setItem('CurrentId',id);
+    this.router.navigateByUrl('', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/default']);
+    }); 
+    //this.router.navigateByUrl('/default');
+    
   }
 }

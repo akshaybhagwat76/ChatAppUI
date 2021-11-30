@@ -4,7 +4,7 @@ import { ErrorComponent } from 'src/app/sample/error/error.component';
 import { DefaultComponent } from '../sample/default/default.component';
 
 const routes: Routes = [
-  { path: '', component: DefaultComponent },
+  { path: 'default', component: DefaultComponent },
   { path: '**', component: ErrorComponent, pathMatch: 'full' }
 ];
 
